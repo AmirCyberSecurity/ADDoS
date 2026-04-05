@@ -18,7 +18,6 @@ python main.py
 aiohttp
 colorama
 pystyle
-requests
 ```
 
 ## Contact
