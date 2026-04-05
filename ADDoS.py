@@ -7,8 +7,6 @@ from colorama import Fore
 import os 
 from pystyle import *
 import socket
-import requests
-
 colorama.init(convert=True, autoreset=True)
 colorama.just_fix_windows_console()
 
