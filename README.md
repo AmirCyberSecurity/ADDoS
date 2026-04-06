@@ -10,7 +10,7 @@ For educational purposes only. Author not responsible for misuse.
 pip install -r requirements.txt
 ```
 
-python main.py
+python ADDoS.py
 
 ## requirements.txt
 
@@ -18,6 +18,13 @@ python main.py
 aiohttp
 colorama
 pystyle
+```
+## Exe file
+
+```bash
+The finished EXE file.
+You can open it without
+Downloading the libraries.
 ```
 
 ## Contact
