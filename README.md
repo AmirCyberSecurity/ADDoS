@@ -27,7 +27,4 @@ You can open it without
 Downloading the libraries.
 ```
 
-## Contact
-Telegram: @Vozmezdin
-
 **ADDoS - Educational project**
