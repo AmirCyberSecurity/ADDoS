@@ -27,4 +27,8 @@ You can open it without
 Downloading the libraries.
 ```
 
+<p align="center">
+  <img src="./image.png" width="100%">
+</p>
+
 **ADDoS - Educational project**
