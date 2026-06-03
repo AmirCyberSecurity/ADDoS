@@ -26,6 +26,7 @@ The finished EXE file.
 You can open it without
 Downloading the libraries.
 ```
+## Preview
 
 <p align="center">
   <img src="./image.png" width="100%">
