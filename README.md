@@ -10,7 +10,14 @@ For educational purposes only. Author not responsible for misuse.
 pip install -r requirements.txt
 ```
 
+```bash
 python ADDoS.py
+```
+Or use 
+
+```bash
+python launch.py
+```
 
 ## requirements.txt
 
