@@ -8,8 +8,6 @@ import os
 from pystyle import *
 import socket
 colorama.init(convert=True, autoreset=True)
-colorama.just_fix_windows_console()
-
 
 os.system('cls') if os.name == 'nt' else os.system('clear')
 print(f"""
