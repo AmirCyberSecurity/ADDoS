@@ -9,6 +9,7 @@ import os
 from pystyle import *
 import socket
 import time
+import webbrowser
 
 colorama.init(convert=True, autoreset=True)
 
@@ -68,10 +69,12 @@ def main_menu():
     """)
     print(f"{Fore.RED} [1] DDoS{Fore.RESET}")
     print(f"{Fore.RED} [2] IP Bomb{Fore.RESET}")
+    print(f"{Fore.RED} [3] GITHUB{Fore.RESET}")
+    print(f"{Fore.RED} [4] Exit{Fore.RESET}")
     choice = input('==> ')
 
-    if choice not in ['1', '2']:
-        print(f"{Fore.RED}Invalid choice. Please select either 1 or 2.{Fore.RESET}")
+    if choice not in ['1', '2', '3', '4']:
+        print(f"{Fore.RED}Invalid choice. Please select either 1, 2, 3, or 4.{Fore.RESET}")
         time.sleep(1)
         main_menu()
 
@@ -84,6 +87,15 @@ def main_menu():
         port = int(input('Port >> '))
         ipbomb(ip, port)
 
+    elif int(choice) == 3:
+        webbrowser.open('https://github.com/AmirCyberSecurity')
+
+    elif int(choice) == 4:
+        print(f"{Fore.RED}Exiting...{Fore.RESET}")
+        time.sleep(1)
+        sys.exit()
+
 if __name__ == "__main__":
     main_menu()
+
 
