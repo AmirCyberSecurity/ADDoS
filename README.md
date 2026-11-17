@@ -26,13 +26,7 @@ aiohttp
 colorama
 pystyle
 ```
-## Exe file
 
-```bash
-The finished EXE file.
-You can open it without
-Downloading the libraries.
-```
 ## Preview
 
 <p align="center">
