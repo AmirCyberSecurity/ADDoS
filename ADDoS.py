@@ -66,7 +66,7 @@ def main_menu():
     {Fore.RESET}                                                                                 
 
     """)
-    print(f"{Fore.RED} [1] DDoS{Fore.RESET}")
+    print(f"{Fore.RED} [1] DoS{Fore.RESET}")
     print(f"{Fore.RED} [2] UDP Flood{Fore.RESET}")
     print(f"{Fore.RED} [3] GITHUB{Fore.RESET}")
     print(f"{Fore.RED} [4] Exit{Fore.RESET}")
