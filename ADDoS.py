@@ -1,5 +1,4 @@
 import time
-
 import aiohttp
 import asyncio
 import sys
@@ -68,7 +67,7 @@ def main_menu():
 
     """)
     print(f"{Fore.RED} [1] DDoS{Fore.RESET}")
-    print(f"{Fore.RED} [2] IP Bomb{Fore.RESET}")
+    print(f"{Fore.RED} [2] UDP Flood{Fore.RESET}")
     print(f"{Fore.RED} [3] GITHUB{Fore.RESET}")
     print(f"{Fore.RED} [4] Exit{Fore.RESET}")
     choice = input('==> ')
