@@ -62,8 +62,3 @@ ADDoS is an educational project intended for cybersecurity learning and authoriz
 
 Only use this application on systems you own or have explicit permission to test. The author is not responsible for misuse or damage caused by unauthorized use.
 
-<div align="center">
-
-**ADDoS - Educational Cybersecurity Project**
-
-</div>
