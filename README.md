@@ -1,36 +1,69 @@
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=24&pause=80&color=FF0000&center=true&vCenter=true&width=1000&lines=%24+ADDoS+%2B+IP+BOMB+UTILITY;%24+ASYNC+NETWORK+FLOOD;%24+PYTHON+CLI+TOOL;%24+FOR+EDUCATIONAL+PURPOSES+ONLY)](https://git.io/typing-svg)
+<h1 align="center">ADDoS</h1>
+<div align="center">
+**Educational DoS Tool**
 
-# ADDoS
+A Python-based application for educational cybersecurity research and controlled laboratory environments.
+</div>
 
-Educational cybersecurity application built with Python
+<p align="center">
+  <img src="./image.png" width="90%">
+</p>
 
-For educational purposes only. Author not responsible for misuse.
+## Features
+
+- Python-based application.
+- Simple installation and launch.
+- Educational cybersecurity testing in authorized environments.
+
+## Installation
+
+Clone the repository and enter the project directory:
+
+```bash
+git clone https://github.com/AmirCyberSecurity/ADDoS
+cd ADDoS
+```
+
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+## Run
+
+Start the application:
+
 ```bash
 python ADDoS.py
 ```
-Or use 
+
+## Quick Start
+
+Alternatively, use the launcher:
 
 ```bash
 python launch.py
 ```
 
-## requirements.txt
+## Requirements
 
-```bash
+```text
 aiohttp
 colorama
 pystyle
 ```
 
-## Preview
+Python 3.x is required.
 
-<p align="center">
-  <img src="./image.png" width="100%">
-</p>
+## Disclaimer
 
-**ADDoS - Educational project**
+ADDoS is an educational project intended for cybersecurity learning and authorized testing in controlled environments.
+
+Only use this application on systems you own or have explicit permission to test. The author is not responsible for misuse or damage caused by unauthorized use.
+
+<div align="center">
+
+**ADDoS - Educational Cybersecurity Project**
+
+</div>
